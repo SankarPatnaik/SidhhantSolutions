@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Salesforce-inspired colors */
+  --sf-blue: hsl(207, 90%, 54%);
+  --sf-blue-light: hsl(210, 85%, 62%);
+  --sf-blue-dark: hsl(207, 100%, 29%);
+  --sf-blue-lightest: hsl(210, 100%, 97%);
+  --sf-success: hsl(165, 100%, 42%);
+  --sf-warning: hsl(20, 100%, 60%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-sf-blue {
+    color: var(--sf-blue);
+  }
+  
+  .text-sf-blue-light {
+    color: var(--sf-blue-light);
+  }
+  
+  .text-sf-blue-dark {
+    color: var(--sf-blue-dark);
+  }
+  
+  .bg-sf-blue {
+    background-color: var(--sf-blue);
+  }
+  
+  .bg-sf-blue-light {
+    background-color: var(--sf-blue-light);
+  }
+  
+  .bg-sf-blue-dark {
+    background-color: var(--sf-blue-dark);
+  }
+  
+  .bg-sf-blue-lightest {
+    background-color: var(--sf-blue-lightest);
+  }
+  
+  .text-sf-success {
+    color: var(--sf-success);
+  }
+  
+  .bg-sf-success {
+    background-color: var(--sf-success);
+  }
+  
+  .text-sf-warning {
+    color: var(--sf-warning);
+  }
+  
+  .bg-sf-warning {
+    background-color: var(--sf-warning);
+  }
+  
+  .border-sf-blue {
+    border-color: var(--sf-blue);
+  }
+  
+  .hover\:bg-sf-blue:hover {
+    background-color: var(--sf-blue);
+  }
+  
+  .hover\:bg-sf-blue-dark:hover {
+    background-color: var(--sf-blue-dark);
+  }
+  
+  .hover\:text-sf-blue:hover {
+    color: var(--sf-blue);
+  }
+}
